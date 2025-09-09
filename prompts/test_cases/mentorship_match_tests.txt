@@ -1,0 +1,19 @@
+Input: I wish I had someone to guide me.
+Expected Intent: mentorship_match
+Expected Response: Ask about domain interest. Suggest mentorship platforms or strategies.
+
+Input: Can you recommend a mentor for AI research?
+Expected Intent: mentorship_match
+Expected Response: Suggest platforms like ADPList, MentorCruise, or LinkedIn groups focused on AI.
+
+Input: I’m looking for peer support, not formal mentorship.
+Expected Intent: mentorship_match (follow-up)
+Expected Response: Recommend hackathons, Discord communities, or local meetups.
+
+Input: I don’t know what kind of mentor I need.
+Expected Intent: mentorship_match (fallback)
+Expected Response: Ask about current challenges or goals to guide mentor matching.
+
+Notes:
+- Test domain-specific suggestions.
+- Ensure EchoPath adapts tone based on user confidence.

@@ -1,0 +1,19 @@
+Input: I feel stuck and unsure what to do next.
+Expected Intent: emotional_support
+Expected Response: Validate emotion, offer to explore challenges or reconnect with purpose.
+
+Input: I feel like I’m falling behind compared to others.
+Expected Intent: emotional_support
+Expected Response: Address imposter syndrome. Reframe progress and offer support.
+
+Input: I’m burned out and questioning my path.
+Expected Intent: emotional_support
+Expected Response: Gentle acknowledgment, invitation to pause and reflect, option to explore new directions.
+
+Input: I don’t know if I belong in tech.
+Expected Intent: emotional_support
+Expected Response: Affirm belonging, highlight strengths, and offer encouragement.
+
+Notes:
+- Test emotional tone detection and fallback logic.
+- Ensure EchoPath doesn’t rush into advice—starts with empathy.

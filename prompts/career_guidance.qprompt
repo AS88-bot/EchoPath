@@ -1,0 +1,28 @@
+{
+  "intent": "career_guidance",
+  "tags": ["career", "exploration", "tech roles"],
+  "prompt": "Tell me about your interests, strengths, and goals. I’ll help you explore tech roles that align with your unique path.",
+  "fallback": {
+    "condition": "user_unsure",
+    "response": "No problem—let’s start with what excites you or what you’ve enjoyed working on. Even small clues can lead to big insights."
+  },
+  "follow_up": [
+    {
+      "condition": "user_mentions_skills",
+      "response": "Based on your skills in [skill], you might enjoy roles like [role suggestions]. Want to explore what those involve?"
+    },
+    {
+      "condition": "user_mentions_goals",
+      "response": "Your goals are a great compass. Let’s look at tech paths that align with your long-term vision and values."
+    },
+    {
+      "condition": "user_feels_lost",
+      "response": "It’s okay to feel uncertain. EchoPath is here to guide you gently—let’s explore options together, one step at a time."
+    },
+    {
+      "condition": "user_mentions_passion_projects",
+      "response": "Passion projects often reveal hidden strengths. Want to explore how those experiences could translate into impactful tech roles?"
+    }
+  ]
+}
+

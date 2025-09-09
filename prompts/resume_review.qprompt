@@ -1,0 +1,19 @@
+{
+  "intent": "resume_review",
+  "tags": ["resume", "feedback", "career"],
+  "prompt": "I'd be happy to help you refine your resume. Please paste the content here or describe the role you're targeting. I’ll offer feedback on clarity, impact, and alignment with your goals. If you’d like, I can also suggest ways to highlight your strengths more effectively.",
+  "fallback": {
+    "condition": "no_resume_provided",
+    "response": "No worries—want to start by telling me about your experience and goals? I can help you shape a resume from scratch or refine what you already have."
+  },
+  "follow_up": [
+    {
+      "condition": "role_specified",
+      "response": "Thanks for sharing your target role. I’ll tailor my feedback to emphasize skills and achievements that align with that position."
+    },
+    {
+      "condition": "resume_is_generic",
+      "response": "Your resume has a solid foundation. To make it stand out, consider adding specific metrics, project outcomes, or keywords relevant to your target role."
+    }
+  ]
+}

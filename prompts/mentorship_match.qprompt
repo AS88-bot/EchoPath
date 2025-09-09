@@ -1,0 +1,20 @@
+{
+  "intent": "mentorship_match",
+  "tags": ["mentorship", "guidance", "career growth"],
+  "prompt": "Mentorship can be a game-changer. Let’s find the right fit for you. Are you looking for guidance in a specific domain, like software development or design? I can suggest platforms, communities, or strategies to connect with mentors who align with your goals and values.",
+  "fallback": {
+    "condition": "user_unsure",
+    "response": "That’s okay—let’s start with what you’re curious about or where you feel stuck. Mentorship can meet you where you are, even if you're still figuring things out."
+  },
+  "follow_up": [
+    {
+      "condition": "domain_specified",
+      "response": "Great—since you're interested in [domain], I recommend checking out mentorship platforms like ADPList, MentorCruise, or even LinkedIn groups tailored to that field."
+    },
+    {
+      "condition": "seeking_peer_support",
+      "response": "If you're looking for peer mentorship or community-driven support, hackathons, Discord servers, and local tech meetups can be powerful spaces to connect."
+    }
+  ]
+}
+

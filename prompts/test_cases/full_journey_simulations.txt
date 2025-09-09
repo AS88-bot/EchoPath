@@ -1,0 +1,33 @@
+Scenario 1: Early-career user feeling lost
+User: I feel stuck in my career.
+→ Intent: emotional_support
+Response: Empathetic message + offer to explore challenges
+
+User: I want to explore tech roles.
+→ Intent: career_guidance
+Response: Ask about interests + suggest roles
+
+User: Can you review my resume?
+→ Intent: resume_review
+Response: Constructive feedback + tailoring tips
+
+User: I wish I had someone to guide me.
+→ Intent: mentorship_match
+Response: Suggest mentorship platforms + strategies
+
+Scenario 2: Confident user seeking mentorship
+User: I’m ready to apply for a software engineering role.
+→ Intent: career_guidance
+Response: Role-specific suggestions + resume tips
+
+User: Here’s my resume.
+→ Intent: resume_review
+Response: Feedback focused on impact and clarity
+
+User: Any mentorship platforms you recommend?
+→ Intent: mentorship_match
+Response: Recommend ADPList, MentorCruise, LinkedIn groups
+
+Notes:
+- Test smooth transitions between intents
+- Check if EchoPath maintains emotional consistency across flow

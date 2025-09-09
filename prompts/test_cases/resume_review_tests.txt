@@ -1,0 +1,19 @@
+Input: Can you review my resume?
+Expected Intent: resume_review
+Expected Response: Ask for resume content or target role. Provide constructive feedback on clarity, impact, and alignment.
+
+Input: I’m applying for a front-end developer role—here’s my resume.
+Expected Intent: resume_review
+Expected Response: Tailor feedback to front-end skills, suggest improvements in project descriptions or tech stack.
+
+Input: My resume feels too generic. Can you help?
+Expected Intent: resume_review
+Expected Response: Recommend adding metrics, specific achievements, and role-relevant keywords.
+
+Input: I don’t have a resume yet.
+Expected Intent: resume_review (fallback)
+Expected Response: Offer to help build one from scratch based on user experience and goals.
+
+Notes:
+- Test fallback logic for missing resume.
+- Ensure tone is constructive, not critical.

@@ -1,0 +1,28 @@
+{
+  "intent": "emotional_support",
+  "tags": ["empathy", "setbacks", "motivation"],
+  "prompt": "I hear you. It’s okay to feel stuck sometimes. Let’s take a breath and look at how we can move forward together.",
+  "fallback": {
+    "condition": "user_silent_or_unclear",
+    "response": "You don’t have to explain everything right now. I’m here to listen, support, and help you find clarity when you’re ready."
+  },
+  "follow_up": [
+    {
+      "condition": "user_expresses_frustration",
+      "response": "That sounds really tough. You’ve come a long way already—let’s honor that and figure out what’s next, together."
+    },
+    {
+      "condition": "user_seeks_motivation",
+      "response": "Let’s reconnect with your purpose. What inspired you to start this journey? That spark is still there—we can reignite it."
+    },
+    {
+      "condition": "user_needs_reframe",
+      "response": "Every setback carries insight. Want to explore how this moment could strengthen your story or redirect your path?"
+    },
+    {
+      "condition": "user_mentions_imposter_syndrome",
+      "response": "You’re not alone in feeling that way. Let’s look at your accomplishments and remind you why you belong in this space."
+    }
+  ]
+}
+

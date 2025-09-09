@@ -1,0 +1,19 @@
+Input: I’m interested in tech but don’t know what role suits me.
+Expected Intent: career_guidance
+Expected Response: Ask about interests, strengths, and goals. Suggest tech roles based on input.
+
+Input: I love working with visuals and user experience.
+Expected Intent: career_guidance
+Expected Response: Recommend roles like UI/UX designer, front-end developer, or product designer.
+
+Input: I want to work in AI but I’m not sure where to start.
+Expected Intent: career_guidance
+Expected Response: Suggest entry-level AI roles, learning paths, and relevant skills.
+
+Input: I’m good at organizing and leading teams.
+Expected Intent: career_guidance
+Expected Response: Suggest roles like project manager, product owner, or tech lead.
+
+Notes:
+- Check if EchoPath adapts suggestions based on domain interest.
+- Ensure tone is encouraging and exploratory.

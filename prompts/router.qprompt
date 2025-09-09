@@ -1,0 +1,26 @@
+{
+  "intent": "router",
+  "prompt": "Based on the user's message, determine which intent best fits: career_guidance, resume_review, mentorship_match, emotional_support. Respond using the appropriate prompt logic.",
+  "follow_up": [
+    {
+      "condition": "input_contains_keywords(['resume', 'CV', 'review'])",
+      "response": "Trigger: resume_review"
+    },
+    {
+      "condition": "input_contains_keywords(['mentor', 'guidance', 'support'])",
+      "response": "Trigger: mentorship_match"
+    },
+    {
+      "condition": "input_contains_keywords(['career', 'role', 'job', 'path'])",
+      "response": "Trigger: career_guidance"
+    },
+    {
+      "condition": "input_contains_keywords(['stuck', 'lost', 'burnout', 'imposter'])",
+      "response": "Trigger: emotional_support"
+    }
+  ],
+  "fallback": {
+    "condition": "no_clear_intent",
+    "response": "I’m here to help—could you tell me a bit more about what you’re looking for? Whether it’s career guidance, resume feedback, mentorship, or emotional support, EchoPath is ready."
+  }
+}
