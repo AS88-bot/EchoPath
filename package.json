@@ -1,0 +1,12 @@
+{
+  "name": "echopath",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
