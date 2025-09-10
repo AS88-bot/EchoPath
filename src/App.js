@@ -1,9 +1,7 @@
 import React from 'react';
+import ChatScreen from './ChatScreen';
 
 export default function App() {
-  return (
-    <div>
-      <p>Hello EchoPath</p>
-    </div>
-  );
+  return <ChatScreen />;
 }
+
