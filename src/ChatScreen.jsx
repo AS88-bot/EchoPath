@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, Text, ScrollView, StyleSheet } from 'react-native';
-import { routeIntent } from '../screens/logic/IntentRouter';
+import { routeIntent } from './IntentRouter';
 import { responses } from '../screens/logic/Responses';
 import { detectTone } from '../screens/logic/ToneAnalyzer';
 
