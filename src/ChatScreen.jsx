@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { routeIntent } from './IntentRouter';
-import { responses } from '../screens/logic/Responses';
-import { detectTone } from '../screens/logic/ToneAnalyzer';
+import { responses } from './screens/logic/Responses';
+import { detectTone } from './screens/logic/ToneAnalyzer';
 
 export default function ChatScreen() {
   const [messages, setMessages] = useState([]);
