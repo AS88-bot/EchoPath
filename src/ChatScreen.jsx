@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { View, TextInput, Button, Text, ScrollView, StyleSheet } from 'react-native';
 import { routeIntent } from './IntentRouter';
 import { responses } from '../screens/logic/Responses';
 import { detectTone } from '../screens/logic/ToneAnalyzer';
@@ -25,119 +24,44 @@ export default function ChatScreen() {
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.header}>Welcome to EchoPath</Text>
-      <Text style={styles.subtext}>Your emotionally intelligent companion</Text>
+    <div className="min-h-screen bg-gray-100 p-6 flex flex-col">
+      <h1 className="text-2xl font-bold text-indigo-600 mb-1">Welcome to EchoPath</h1>
+      <p className="text-sm text-gray-600 mb-4">Your emotionally intelligent companion</p>
 
-      <ScrollView style={styles.chatBox}>
+      <div className="flex-1 overflow-y-auto mb-4">
         {messages.map((msg, index) => {
-          const bubbleStyle =
+          const bubbleClass =
             msg.sender === 'You'
-              ? styles.userBubble
+              ? 'bg-gray-200 self-end'
               : emotionalState === 'overwhelmed'
-              ? styles.echoBubbleCalm
+              ? 'bg-orange-100'
               : emotionalState === 'confused'
-              ? styles.echoBubbleSoft
+              ? 'bg-green-100'
               : emotionalState === 'positive'
-              ? styles.echoBubblePositive
-              : styles.echoBubble;
+              ? 'bg-teal-100'
+              : 'bg-indigo-100';
 
           return (
-            <View key={index} style={bubbleStyle}>
-              <Text style={styles.sender}>{msg.sender}</Text>
-              <Text style={styles.message}>{msg.text}</Text>
-            </View>
+            <div key={index} className={`p-3 rounded-lg mb-2 max-w-[80%] ${bubbleClass}`}>
+              <p className="font-semibold text-gray-800">{msg.sender}</p>
+              <p className="text-gray-700">{msg.text}</p>
+            </div>
           );
         })}
-      </ScrollView>
+      </div>
 
-      <TextInput
+      <input
         value={input}
-        onChangeText={setInput}
+        onChange={(e) => setInput(e.target.value)}
         placeholder="Type how you're feeling..."
-        style={styles.input}
+        className="border border-gray-300 p-2 rounded w-full mb-2"
       />
-      <Button title="Send" onPress={handleSend} color="#5A67D8" />
-    </View>
+      <button
+        onClick={handleSend}
+        className="bg-indigo-500 text-white px-4 py-2 rounded hover:bg-indigo-600"
+      >
+        Send
+      </button>
+    </div>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    padding: 20,
-    backgroundColor: '#F3F4F6',
-  },
-  header: {
-    fontSize: 24,
-    fontWeight: 'bold',
-    color: '#4C51BF',
-    marginBottom: 4,
-  },
-  subtext: {
-    fontSize: 14,
-    color: '#718096',
-    marginBottom: 12,
-  },
-  chatBox: {
-    flex: 1,
-    marginBottom: 10,
-  },
-  userBubble: {
-    backgroundColor: '#E2E8F0',
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 6,
-    alignSelf: 'flex-end',
-    maxWidth: '80%',
-  },
-  echoBubble: {
-    backgroundColor: '#C3DAFE',
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 6,
-    alignSelf: 'flex-start',
-    maxWidth: '80%',
-  },
-  echoBubbleCalm: {
-    backgroundColor: '#FEEBC8', // warm peach
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 6,
-    alignSelf: 'flex-start',
-    maxWidth: '80%',
-  },
-  echoBubbleSoft: {
-    backgroundColor: '#C6F6D5', // soft green
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 6,
-    alignSelf: 'flex-start',
-    maxWidth: '80%',
-  },
-  echoBubblePositive: {
-    backgroundColor: '#B2F5EA', // teal
-    padding: 10,
-    borderRadius: 8,
-    marginBottom: 6,
-    alignSelf: 'flex-start',
-    maxWidth: '80%',
-  },
-  sender: {
-    fontWeight: '600',
-    marginBottom: 2,
-    color: '#2D3748',
-  },
-  message: {
-    fontSize: 16,
-    color: '#1A202C',
-  },
-  input: {
-    borderWidth: 1,
-    borderColor: '#CBD5E0',
-    padding: 10,
-    borderRadius: 8,
-    backgroundColor: '#FFF',
-    marginBottom: 10,
-  },
-});
