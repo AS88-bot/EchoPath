@@ -64,7 +64,7 @@ EchoPath is built on empathy, clarity, and empowerment. It’s not just a tool�
 
 👤 Creator
 Aisha Sultana Core Graphic Design Member @ WE Hub
-Computer Science Undergrad | AI & UX Advocate www.linkedin.com/in/aisha-sultana-90a395306 
+Computer Science Undergrad | AI & Cloud Advocate www.linkedin.com/in/aisha-sultana-90a395306 
 
 📌 Future Enhancements
 Confidence scoring to adapt tone based on user certainty
